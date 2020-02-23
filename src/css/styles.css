@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-primary: rgb(233, 73, 73);
+
+    --ff-brand: 'Pacifico', sans-serif;
+    --ff-primary: 'Inter', sans-serif;
+
+}
+

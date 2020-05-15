@@ -1,0 +1,199 @@
+$clr-light: #fff;
+$clr-dark: #303030;
+// $clr-primary: rgb(233, 73, 73);
+$clr-primary: #f0bd38;
+$clr-secondary: #202857;
+$clr-grey: #626262;
+
+$ff-brand: 'Playfair Display', sans-serif;
+$ff-primary: 'Inter', sans-serif;
+
+$fs-h1: 3.5rem;
+$fs-h2: 2rem;
+$fs-h3: 1.5rem;
+$fs-body: 1rem;
+    
+$bs-1: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em 0.25em rgba(0, 0, 0, .25);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 17px;
+}
+
+body {
+    color: $clr-dark;
+    font-family: $ff-primary;
+    font-size: $fs-body;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    font-family: $ff-brand;
+    margin: 0;
+    //Target Webkit 11+ only to fix letter spacing from CDN fonts
+    @media not all and (min-resolution:.001dpcm){ 
+        @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        letter-spacing: -0.075em;
+    }}
+}
+
+h1 {
+    font-size: $fs-h1;
+}
+h2 {
+    font-size: $fs-h2;
+}
+h3 {
+    font-size: $fs-h3;
+}
+
+button {
+    cursor: pointer;
+    padding: 1em;
+    border: none;
+    border-radius: 25px;
+    box-shadow: $bs-1;
+    -webkit-appearance: none;
+    background-color: $clr-dark;
+    color: $clr-primary;
+}
+
+nav {
+    width: 100%;
+    background-color: $clr-primary;
+    color: $clr-dark;
+    padding: 2em;
+    font-size: 0.8rem;
+}
+
+input[type=text] {
+    padding: 1em;
+    border: none;
+    border-radius: 25px;
+    box-shadow: $bs-1;
+    -webkit-appearance: none;
+}
+
+input[type=file] {
+//   border: 0;
+//   clip: rect(0, 0, 0, 0);
+//   height: 1px;
+//   overflow: hidden;
+//   padding: 0;
+//   position: absolute !important;
+//   white-space: nowrap;
+//   width: 1px; 
+  opacity: 0;
+}
+
+label[for=file] {
+    cursor: pointer;
+    padding: 1em;
+    border: none;
+    border-radius: 25px;
+    box-shadow: $bs-1;
+    -webkit-appearance: none;
+}
+
+footer {
+    background-color: $clr-primary;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1em;
+    h4 {
+        margin: 0;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+.center {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 3em;
+}
+
+.fullpage {
+    width: 100%;
+    height: 100vh;
+    // max-width: 100%;
+}
+
+.showcase {
+    padding: 2em;
+    .content-container {
+        h2 {
+            font-family: $ff-brand;
+        }
+    }   
+}
+
+.img-container {
+    padding: 2em 0 2em 0;
+    img {
+        width: 100%;
+        box-shadow: $bs-1;
+    }
+}
+
+.clr--primary {
+    background-color: $clr-primary;
+    color: $clr-dark;
+}
+
+.clr--secondary {
+    background-color: $clr-dark;
+    color: $clr-primary;
+}
+
+
+
+#landing {
+    background-color: $clr-primary;
+    .landing__contents {
+        p {
+            margin: 3em 0 3em 0;
+        }
+    }
+}
+
+.search {
+    margin: 2em 0 2em 0;
+}
+
+#meet {
+    background-color: $clr-dark;
+    color: $clr-light;
+
+    img {
+        border-radius: 15px;
+    }
+
+    button {
+        background-color: $clr-primary;
+        color: $clr-dark;
+        font-weight: 500;
+    }
+}
+
+#add {
+    background-color: $clr-dark;
+    color: $clr-primary;
+    p {
+        color: $clr-light;
+        margin: 2em 0 2em 0;
+    }
+}

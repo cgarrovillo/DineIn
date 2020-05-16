@@ -83,20 +83,20 @@ input[type=text] {
 }
 
 input[type=file] {
-//   border: 0;
-//   clip: rect(0, 0, 0, 0);
-//   height: 1px;
-//   overflow: hidden;
-//   padding: 0;
-//   position: absolute !important;
-//   white-space: nowrap;
-//   width: 1px; 
-  opacity: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px; 
+//   opacity: 0;
 }
 
 label[for=file] {
     cursor: pointer;
-    padding: 1em;
+    padding: 1em 2em;
     border: none;
     border-radius: 25px;
     box-shadow: $bs-1;
@@ -194,6 +194,19 @@ footer {
     color: $clr-primary;
     p {
         color: $clr-light;
-        margin: 2em 0 2em 0;
+    }
+
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+        input{
+            margin: 1.5em;
+        }
+
+        input[type=text] {
+            border-radius: 5px;
+        }
     }
 }

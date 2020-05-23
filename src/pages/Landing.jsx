@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import Footer from '../components/Footer'
 import Button from '../components/Button'
 import InputField from '../components/InputField'
 
 export default function Landing() {
+    const search = useRef(null)
+    let searchValue = useState()
+    function handleSubmit(event) {
+        event.preventDefault()
+        searchValue = search.current.value
+    }
+
     return (
         <>
             <section className="center fullpage" id="landing">
@@ -14,7 +22,9 @@ export default function Landing() {
                         A glorified food menu database that actually <b>includes prices</b>
                     </p>
                     <div className="search">
-                        <InputField placeholder="D Spot Cafe" />
+                        <form onSubmit={handleSubmit}>
+                            <input ref={search} type="text" placeholder="D Spot Cafe" />
+                        </form>
                     </div>
 
                     <Button href="/add">Add a Menu</Button>

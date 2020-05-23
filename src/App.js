@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import Landing from './pages/Landing'
 import Add from './pages/Add'
+import RestaurantList from './pages/RestaurantList'
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         </Route>
         <Route exact path="/add">
           <Add />
+        </Route>
+        <Route exact path="/menus">
+          <RestaurantList />
         </Route>
       </Switch>
     </>

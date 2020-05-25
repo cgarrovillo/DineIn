@@ -7,7 +7,7 @@ import Landing from "./pages/Landing"
 import Add from "./pages/Add"
 import RestaurantList from "./pages/RestaurantList"
 
-function App() {
+export default function App() {
   const [search, setSearch] = useState("")
   const [menus, setMenus] = useState([])
 
@@ -30,8 +30,12 @@ function App() {
         pref.listAll().then((x) => {
           let path = x.items[0].location.path_
           var imgRef = storage.ref(path)
-          imgRef.getDownloadURL().then((url) => {
-            setMenus((menus) => menus.concat(url))
+          imgRef.getDownloadURL().then((imgURL) => {
+            let menuObj = {
+              src: imgURL,
+              restaurant: pref.name,
+            }
+            setMenus((menus) => menus.concat(menuObj))
           })
         })
       })
@@ -63,5 +67,3 @@ function App() {
     </>
   )
 }
-
-export default App

@@ -123,15 +123,6 @@ footer {
   }
 }
 
-.left {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  margin: 3em;
-}
-
 .center {
   display: flex;
   flex-flow: column nowrap;
@@ -139,13 +130,13 @@ footer {
   align-items: center;
   text-align: center;
 
-  margin: 3em;
+  padding: 3em;
 }
 
 .fullpage {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  // max-width: 100%;
+  max-width: 100%;
 }
 
 .showcase {

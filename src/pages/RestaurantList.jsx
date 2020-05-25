@@ -20,7 +20,7 @@ export default function RestaurantList(props) {
 
       <div className="center ">
         {menus.map((menu) => (
-          <RestaurantCard src={menu} />
+          <RestaurantCard src={menu.src} title={menu.restaurant} />
         ))}
       </div>
     </>

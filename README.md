@@ -15,10 +15,10 @@ Yelp/Google reviews prices are either years old or too much to sort through
   
 - Firebase
   - Dealing with the Firebase API + console
-  - Firebase Storage
+  - Firebase Storage, file upload and retrieval
 
 ### The idea (in theory)
 An online platform for foodies to submit pictures of menus for many others to look at
 
 ### In reality
-The project turned out to be a glorified photo upload/retrieval application
+The project turned out to be a glorified photo upload/retrieval application, but I gained valuable experience
